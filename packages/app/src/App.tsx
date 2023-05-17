@@ -36,6 +36,7 @@ import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/
 
 import { githubAuthApiRef } from '@backstage/core-plugin-api';
 import { SignInProviderConfig, SignInPage } from '@backstage/core-components';
+import { K8SgptPage } from '@internal/plugin-k8sgpt';
 
 const githubProvider: SignInProviderConfig = {
   id: 'github-auth-provider',
@@ -110,6 +111,7 @@ const routes = (
     </Route>
     <Route path="/settings" element={<UserSettingsPage />} />
     <Route path="/catalog-graph" element={<CatalogGraphPage />} />
+    <Route path="/k8sgpt" element={<K8SgptPage />} />
   </FlatRoutes>
 );
 
